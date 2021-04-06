@@ -1,0 +1,16 @@
+.Contact{
+    
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.contact-title-description h1{
+    font-size: 5.2vw;
+    color: #08FDD8;
+    margin: 0;
+    
+   }
+   .contact-title-description p{
+       color: white;
+       font-size: 1.3vw;
+   }

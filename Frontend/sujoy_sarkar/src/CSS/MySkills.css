@@ -1,0 +1,133 @@
+.skills-experience{
+    display: flex;
+    margin-left: 50px;
+    
+}
+.myskills{
+    width: 35vw;
+    margin-top: 20px;
+}
+.myskills h1{
+ font-size: 5.2vw;
+ color: #08FDD8;
+ margin: 0;
+ 
+}
+.myskills p{
+    color: white;
+    font-size: 1.3vw;
+}
+
+.skills-list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: center;
+}
+
+.skills-list h2{
+    color: white;
+    margin: 10px;
+}
+
+
+/* Progress Animation One*/
+
+.containerone{
+    height: 2vh;
+    width: 30vw;
+    background-color: grey;
+    position: relative;
+    border-radius: 20px;
+}
+
+.containerone .progress-bar{
+position: absolute;
+height: 100%;
+border-radius: 20px;
+background-color: #aeea00;
+animation: progess-animation-one 5s forwards;
+}
+
+@keyframes progess-animation-one {
+    0% {width: 0%;}
+    100%{width: 90%;}
+}
+
+
+/* Progress Animation Two*/
+
+.containertwo{
+    height: 2vh;
+    width: 30vw;
+    background-color: grey;
+    position: relative;
+    border-radius: 20px;
+}
+
+.containertwo .progress-bar{
+position: absolute;
+height: 100%;
+border-radius: 20px;
+background-color: #f06292;
+animation: progess-animation-two 5s forwards;
+}
+
+@keyframes progess-animation-two {
+    0% {width: 0%;}
+    100%{width: 80%;}
+}
+
+
+/* Progress Animation Three*/
+
+.containerthree{
+    height: 2vh;
+    width: 30vw;
+    background-color: grey;
+    position: relative;
+    border-radius: 20px;
+}
+
+.containerthree .progress-bar{
+position: absolute;
+height: 100%;
+border-radius: 20px;
+background-color: #304ffe;
+animation: progess-animation-three 5s forwards;
+}
+
+@keyframes progess-animation-three {
+    0% {width: 0%;}
+    100%{width: 85%;}
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardone{
+    height: 20vh;
+    width: 13vw;
+    background-image: url("../Assets/app-dev.jpg");
+    border-radius: 6px;
+    background-size: contain;
+    box-shadow: 0px 3px 7px #888888;
+}
+.cardtwo{
+    height: 20vh;
+    width: 13vw;
+    background-image: url("../Assets/web-dev.jpg");
+    border-radius: 6px;
+    background-size: contain;
+    box-shadow: 0px 3px 7px #888888;
+}
+.cardone:hover{
+    height: 19vh;
+    width: 12vw;
+}
+.cardtwo:hover{
+    height: 19vh;
+    width: 12vw;
+}

@@ -1,0 +1,18 @@
+.about-page{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+.about-myself{
+    width: 40vw;
+}
+.about-myself h1{
+ font-size: 5.2vw;
+ color: #08FDD8;
+ margin: 0;
+ 
+}
+.about-myself p{
+    color: white;
+    font-size: 1.3vw;
+}

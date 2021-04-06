@@ -1,0 +1,32 @@
+
+.right-side{
+   
+    position: relative;
+    
+}
+
+/* .right-side::after {
+    content: "";
+     background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-image: url(../Assets/afran.jpg);
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  } */
+
+ 
+
+ .particles{
+     position: absolute;
+     left: 0;
+     top: 0; 
+     right: 0;
+     bottom: 0;
+     
+ }
