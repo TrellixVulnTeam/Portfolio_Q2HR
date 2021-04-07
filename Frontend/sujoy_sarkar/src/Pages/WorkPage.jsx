@@ -30,7 +30,7 @@ function WorkPage() {
         <div className="work-page">
 
             {worklists.map((item) =>
-                <Link to="workdetails" style={linkStyle}>
+                <Link to="/work/workdetails" style={linkStyle}>
                     <div className="item">
                         <div className="items-image" style={{ backgroundImage: "url(" + item.images[1] + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}></div>
                         <p className="items-title">{item.title}</p>
