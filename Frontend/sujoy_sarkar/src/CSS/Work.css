@@ -3,35 +3,25 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 88vw;
-    grid-gap: 20px;
+    grid-gap: 10px;
     margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    
     overflow: auto;
     justify-items: center;
     
     
 }
 
-.items{
+.items-image{
     height: 27vh;
     width: 25vw;
     color: white;
     background-color: #181818;
     border-radius: 10px;
     box-shadow: 0 2px 3px 0 grey;
-    opacity: 0.3;
+    
+    
    
-}
-
-.items:hover{
-    height: 27vh;
-    width: 25vw;
-    color: white;
-    background-color: #181818;
-    border-radius: 10px;
-    box-shadow: 0 2px 3px 0 grey;
-    opacity: 1;
 }
 
 html {
@@ -42,3 +32,19 @@ html {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
+
+.items-title{
+    
+    color: white;
+    margin-top: 10px;
+    font-size: 1.5vw;
+    }
+
+.item{
+        opacity: 0.3;
+        
+   
+    }
+.item:hover{
+        opacity: 1;
+    }

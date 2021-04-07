@@ -1,16 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../CSS/Work.css'
-import Background from '../Assets/app-dev.jpg'
+import axios from 'axios'
+import { Link } from "react-router-dom";
+
+
 
 function WorkPage() {
 
-    var myArray = ["one", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",];
+    var [worklists, setWorklists] = useState([])
+    var linkStyle = {textDecoration:'none'}
+    function fetchData() {
+        axios.get("http://localhost:5100/WorkList")
+            .then(response => {
+
+                setWorklists(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+
+            })
+    }
+
+    useEffect(() => {
+        fetchData();
+    })
 
     return (
 
         <div className="work-page">
 
-            {myArray.map((item) => <div className="items" style={{ backgroundImage: "url(" + Background + ")" }}></div>)}
+            {worklists.map((item) =>
+                <Link to="workdetails" style={linkStyle}>
+                    <div className="item">
+                        <div className="items-image" style={{ backgroundImage: "url(" + item.images[1] + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}></div>
+                        <p className="items-title">{item.title}</p>
+                    </div>
+                </Link>
+
+            )}
 
         </div>
 

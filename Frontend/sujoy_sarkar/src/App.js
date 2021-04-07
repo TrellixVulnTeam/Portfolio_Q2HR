@@ -6,6 +6,7 @@ import MySkillsPage from './Pages/MySkillsPage';
 import WorkPage from './Pages/WorkPage';
 import ContactPage from './Pages/ContactPage';
 import Left_Side_Bar from './Body/Left_Side_Bar';
+import WorkDetails from './Pages/work_details/WorkDetails';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/skills" exact component={MySkillsPage} ></Route>
           <Route path="/work" exact component={WorkPage} ></Route>
           <Route path="/contact" exact component={ContactPage} ></Route>
+          <Route path="/workdetails" exact component={WorkDetails} ></Route>
 
         </Switch>
       </Router>

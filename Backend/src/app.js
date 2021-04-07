@@ -22,10 +22,23 @@ app.post("/worklist", async (req, res) => {
 })
 
 
+// this piece of code will handle workslist Get request
 app.get("/worklist", async (req, res) => {
-    res.send("going well man");
-});
 
+    try {
+        const getWorkLists = await WorksList.find({})
+        res.send(getWorkLists);
+
+    }
+    catch (e) {
+        res.send(e);
+    }
+})
+
+
+
+
+// listen to port 5100
 app.listen(port, () => {
     console.log(`Connection is live at port ${port}`);
 });
