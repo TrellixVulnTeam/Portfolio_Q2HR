@@ -20,6 +20,7 @@ function WorkPage() {
 
     var [worklists, setWorklists] = useState([])
     var linkStyle = { textDecoration: 'none' }
+    
     function fetchData() {
         axios.get("http://localhost:5100/WorkList")
             .then(response => {

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../CSS/Contact.css"
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from "@material-ui/core/styles";
+import axios from 'axios'
 
 const useStyles = makeStyles({
     root: {
@@ -54,13 +55,39 @@ const subjectStyles = makeStyles({
 
 
 function ContactPage() {
+    var [name, setName] = useState("");
+    var [email, setEmail] = useState("");
+    var [subject, setSubject] = useState("");
+    var [message, setMessage] = useState("");
 
     const classes = useStyles();
     const subjectClass = subjectStyles();
 
+    function onSubmit() {
+
+        //    console.log(name);
+        //     console.log(email);
+        //     console.log(subject);
+        //     console.log(message); 
+      
+        axios.post('http://localhost:5100/contact', {
+            "name": name,
+            "email": email,
+            "subject": subject,
+            "message": message,
+          })
+          .then((response) => {
+            console.log(response);
+          }, (error) => {
+            console.log(error);
+          });
+
+
+    }
 
 
     return (
+
         <div className="Contact">
 
             <div className="contact-title-description">
@@ -73,18 +100,18 @@ function ContactPage() {
             <br></br>
             <form>
 
-                <TextField className={classes.root} label="Name" variant="filled" />
-                <TextField className={classes.root} label="Email" variant="filled" />
+                <TextField onChange={(event) => setName(event.target.value)} className={classes.root} label="Name" variant="filled" />
+                <TextField onChange={(event) => setEmail(event.target.value)} className={classes.root} label="Email" variant="filled" />
 
             </form>
             <br></br>
-            <TextField className={subjectClass.root} label="Subject" variant="filled" />
+            <TextField onChange={(event) => setSubject(event.target.value)} className={subjectClass.root} label="Subject" variant="filled" />
             <br></br>
             <br></br>
-            <TextField className={subjectClass.root} label="Your Message" variant="filled" rows={6} multiline={true} />
+            <TextField onChange={(event) => setMessage(event.target.value)} className={subjectClass.root} label="Your Message" variant="filled" rows={6} multiline={true} />
             <br></br>
             <br></br>
-            <Button variant="contained" color="primary">
+            <Button onClick={() => onSubmit()} variant="contained" color="primary">
                 Send Me
             </Button>
 

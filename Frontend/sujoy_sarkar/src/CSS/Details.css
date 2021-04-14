@@ -22,21 +22,21 @@
 }
 
 .work-details h1{
-    color: white;
+    color: #08FDD8;
     align-self: flex-start;
     margin-left: 40px;
     font-size: 4vw;
 }
 
 .work-details h3{
-    color: rgb(18, 236, 135);
+    color: white;
     align-self: flex-start;
     margin-left: 40px;
     font-size: 2.5vw;
     margin-top: 0;
 }
 .work-details h2{
-    color: white;
+    color: #08FDD8;
     align-self: flex-start;
     margin-left: 40px;
     font-size: 2vw;
