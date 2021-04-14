@@ -1,0 +1,56 @@
+.work-details{
+    width: 88vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    overflow: auto;
+    height: 100vh;
+   
+}
+
+.work-details img{
+    width: 84vw;
+    height: 35vh;
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.9;
+    
+}
+.carousel-slider{
+    width: 84vw;
+    height: 35vh;
+}
+
+.work-details h1{
+    color: white;
+    align-self: flex-start;
+    margin-left: 40px;
+    font-size: 4vw;
+}
+
+.work-details h3{
+    color: rgb(18, 236, 135);
+    align-self: flex-start;
+    margin-left: 40px;
+    font-size: 2.5vw;
+    margin-top: 0;
+}
+.work-details h2{
+    color: white;
+    align-self: flex-start;
+    margin-left: 40px;
+    font-size: 2vw;
+    margin-top: 0;
+}
+
+.work-details h4{
+    color: hotpink;
+    align-self: flex-start;
+    margin-left: 40px;
+    font-size: 1.5vw;
+    margin-top: 0;
+}
+
+.button{
+    width: 30vw;
+}
