@@ -1,9 +1,15 @@
 import React from 'react'
+import { useHistory } from "react-router-dom";
 
-function WorkDetails() {
+function WorkDetails(props) {
+    const history = useHistory();
     return (
         <div>
-            <h1>Hi this is details page.</h1>
+
+            <button onClick={() => {
+                console.log(history.location.state.detail)
+            }}> click me buddy</button>
+
         </div>
     )
 }

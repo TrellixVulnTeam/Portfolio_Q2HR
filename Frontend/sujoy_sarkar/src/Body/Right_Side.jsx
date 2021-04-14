@@ -23,7 +23,7 @@ function Right_Side() {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 95
+                            "value": 120
                         },
                         "size": {
                             "value": 1

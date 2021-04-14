@@ -11,20 +11,22 @@ import WorkDetails from './Pages/work_details/WorkDetails';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-      <Left_Side_Bar />
-        <Switch>
-          <Route path="/" exact component={HomePage} ></Route>
-          <Route path="/about" exact component={AboutPage} ></Route>
-          <Route path="/skills" exact component={MySkillsPage} ></Route>
-          <Route path="/work" exact component={WorkPage} ></Route>
-          <Route path="/contact" exact component={ContactPage} ></Route>
-          <Route path="/work/workdetails" exact component={WorkDetails} ></Route>
+    
+      <div className="App">
+        <Router>
+          <Left_Side_Bar />
+          <Switch>
+            <Route path="/" exact component={HomePage} ></Route>
+            <Route path="/about" exact component={AboutPage} ></Route>
+            <Route path="/skills" exact component={MySkillsPage} ></Route>
+            <Route path="/work" exact component={WorkPage} ></Route>
+            <Route path="/contact" exact component={ContactPage} ></Route>
+            <Route path="/work/workdetails" exact component={WorkDetails} ></Route>
 
-        </Switch>
-      </Router>
-     </div>
+          </Switch>
+        </Router>
+      </div>
+
   );
 }
 
