@@ -4,6 +4,9 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from "@material-ui/core/styles";
 import axios from 'axios'
+import Modal from "react-modal";
+Modal.setAppElement('#root');
+
 
 const useStyles = makeStyles({
     root: {
@@ -62,27 +65,30 @@ function ContactPage() {
 
     const classes = useStyles();
     const subjectClass = subjectStyles();
+    var [showModal, setShowModal] = useState(false);
+
+
 
     function onSubmit() {
-
-        //    console.log(name);
-        //     console.log(email);
-        //     console.log(subject);
-        //     console.log(message); 
-      
         axios.post('http://localhost:5100/contact', {
             "name": name,
             "email": email,
             "subject": subject,
             "message": message,
-          })
-          .then((response) => {
-            console.log(response);
-          }, (error) => {
-            console.log(error);
-          });
-
-
+        })
+            .then((response) => {
+                // console.log(response);
+                if (response.status == 200) {
+                    console.log("done");
+                    setShowModal(true);
+                
+                }
+                else {
+                    console.log("Failed");
+                }
+            }, (error) => {
+                console.log(error);
+            });
     }
 
 
@@ -114,6 +120,32 @@ function ContactPage() {
             <Button onClick={() => onSubmit()} variant="contained" color="primary">
                 Send Me
             </Button>
+
+            <Modal className="modal" contentLabel="Example Modal" isOpen={showModal} onRequestClose={() => setShowModal(false)} style={
+                {
+
+                    overlay: {
+                        backgroundColor: "rgba(0, 0, 0, 0.8)",
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+
+
+
+                    },
+                    content: {
+                        backgroundColor: "white",
+                        color: "black",
+                    }
+
+                }
+            }>
+                <h1>This is title</h1>
+                <p>Hi there! I am a modal.</p>
+                <button onClick={() => setShowModal(false)}>Close me</button>
+            </Modal>
+
+
 
         </div>
     )
